@@ -1,0 +1,84 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: peru;
+    z-index: 1; 
+}
+
+#FaceArea{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    height: 70%;
+    background: peru;
+    z-index: 2;
+}
+
+#LeftEb{
+    position: absolute;
+    top: 6%;
+    left: 8%;
+    z-index: 3;
+}
+
+#LeftEb:hover{
+    transform: scale(1.5);
+}
+
+#RightEb{
+    position: absolute;
+    top: 6%;
+    right: 8%;
+    z-index: 3;
+}
+
+#LeftEye{
+    position:absolute;
+    top: 20%;
+    left: 12%;
+    z-index: 3;
+}
+
+#LeftEye:hover{
+    transform: scale(1.5);
+    z-index: 4;
+}
+
+#RightEye{
+    position: absolute;
+    top: 21%;
+    right: 12%;
+    z-index: 3;
+}
+
+#RightEye:hover{
+    transform: scale(1.5);
+    z-index: 4;
+}
+
+#Mouth{
+    position: absolute;
+    top: 55%;
+    left: 23%;
+    z-index: 3;
+}
+
+#Sunglasses{
+    position:absolute;
+    top: 13%;
+    right:-2.5%;
+    z-index: 4;
+}
+
+#Nose{
+    position: absolute;
+    top: 30%;
+    left: 42%;
+}
