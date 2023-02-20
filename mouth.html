@@ -4,10 +4,47 @@
  <meta charset="UTF-8">
  <title>Homepage.html</title>
  <link rel="stylesheet" type="text/css" href = "mouth.css"/>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
  </header>
  
  <body>
-    <p>testtest</p>
+	<div class = "bg">
+		<a href = "index.html">
+			<div id = GoBack></div>
+		  </a>
+
+		<div id = "hide">
+			<img src = "images/mouth.png">
+		</div>
+
+		<div id= "ImgWrap">
+			<img src = "images/TheScream.png" class = "image">
+			<img src = "images/Shaking.png" class = "image shaking">
+		</div>
+
+		<button id = "button"> ? </button>
+		<p id = "BtnText"> Please don't point at the painting. </p>
+
  </body>
+
+ <script>
+
+    var button = document.getElementById("button");
+    button.addEventListener("click", hideDiv);
+
+    function hideDiv() {
+      var div = document.getElementById("hide");
+      div.style.display = "none";
+    }
+
+	const MyBtn = document.querySelector("#button");
+    const MyText = document.querySelector("#BtnText");
+
+    MyBtn.addEventListener("click", function() {
+    MyText.classList.toggle("show");
+    });
+ </script>
  
  </html>

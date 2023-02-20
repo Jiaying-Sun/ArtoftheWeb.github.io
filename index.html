@@ -48,8 +48,15 @@
    <script>
       document.getElementById("Sunglasses").onclick = function() {myFunction()};
       
+      var img = document.getElementById("Sunglasses");
+ 
       function myFunction() {
-        document.getElementById("Sunglasses").style.top = "-15%";
+         if (img.style.top === "5%") {
+            img.style.top = "40%";
+         } else {
+            img.style.top = "5%";
+         } 
+      //   document.getElementById("Sunglasses").style.top = "5%";
       }
    </script>
 

@@ -1,25 +1,207 @@
-.CellWrapper {
-    display:grid;
-    grid-template-columns: auto auto auto;
-    background-color: blue;
-    padding: 10px;
-    row-gap: 10px;
-    column-gap: 10px;
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+#bg{
+background-color: black;
+height: 16000px;
+
 }
 
-.cell {
-    background-color: red;
-    border: 1px solid pink;
-    padding: 20px;
-    font-size: 30px;
+.ask1 {
+color: red;
+text-align: center;
+font-size: 30px;
+font-family: 'Medusa Gothic', sans-serif;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: inline-block;
+}
+
+.ask2 {
+    color: red;
     text-align: center;
-    min-width: 50px;
+    font-size: 20px;
+    font-family: 'Medusa Gothic', sans-serif;
+    position: absolute;
+    top: 10000px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+#styledtable {
+    border-collapse: collapse;
+    position: relative;
+    top: 93%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .InsideAsk1{
+    display: inline-block;
+  }
+
+td a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
-#cell1 {
-    background-color:white;
-}
-
-.ask {
+  #styledtable td, #styledtable th {
+    border: 8px solid white;
+    min-width: 220px;
+    height: 220px;
     text-align: center;
+    background-color: none;
+  }
+  
+  #cell1:hover {
+    background-image: url("images/1.png");
+    background-size: 220px;
+    background-position: center;
+  }
+
+  #cell2:hover {
+    background-image: url("images/2.jpg");
+    background-size: 220px;
+    background-position: center;
+  }
+
+  #cell3:hover {
+    background-image: url("images/3.png");
+    background-size: 220px;
+    background-position: center;
+  }
+
+  #cell4:hover {
+    background-image: url("images/4.png");
+    background-size: 220px;
+    background-position: center;
+  }
+
+  #cell5:hover {
+    background-image: url("images/5.jpg");
+    background-size: 220px;
+    background-position: center;
+  }
+
+  #cell6:hover {
+    background-image: url("images/6.jpg");
+    background-size: 220px;
+    background-position: center;
+  }
+
+  #cell7:hover {
+    background-image: url("images/7.png");
+    background-size: 220px;
+    background-position: center;
+  }
+
+  #cell8:hover {
+    background-image: url("images/8.png");
+    background-size: 220px;
+    background-position: center;
+  }
+
+  #cell9:hover {
+    background-image: url("images/9.png");
+    background-size: 220px;
+    background-position: center;
+  }
+
+  #button{
+    background-color: none;
+    border: none;
+    color: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 15800px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
 }
+
+#ThePainting{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+
+#BtnText {
+    display: none;
+    color: black;
+}
+
+#BtnText.show {
+    display: block;
+    color: red;
+    position: absolute;
+    top: 15890px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Medusa Gothic', sans-serif;
+    font-size: 16px;
+}
+
+#ImgNText {
+    position: relative;
+  }
+  
+  #ImgText {
+    color: red;
+    visibility: hidden;
+    font-family: 'Medusa Gothic', sans-serif;
+    z-index: 4;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #ImgNText:hover #ImgText {
+    visibility: visible;
+  }
+
+  #GoBack {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 3.5%;
+    left: 2%;
+    background-color: rgb(255, 176, 190);
+    border-radius: 50%;
+  }
+
+  #GoBack:hover{
+    content: url(images/main.jpg);
+    width: 80px;
+    height: 80px;
+    transition: 0.5s ease-in-out;
+  }
+
+
+#scroll {
+  color: red;
+  font-family: 'Medusa Gothic', sans-serif;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+
+

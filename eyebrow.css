@@ -1,0 +1,148 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 4000px;
+}
+
+body {
+    background-color: #377337;
+    margin: 0;
+}
+
+#frame {
+    width: 450px;
+    position: fixed;
+    left: 50%;
+    top: 49%;
+    transform: translate(-50%, -50%);
+}
+
+.StickyWrap {
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    
+}
+
+.image {
+transform: scale(0.76);
+}
+
+.s1{
+    top: 18%;
+    
+}
+
+.s2 {
+    top: 18.1%;
+
+}
+
+.s3 {
+    top: 18.1%;
+}
+
+.s4 {
+    top: 18.31%;
+}
+
+.s5 {
+    top: 18.41%;
+}
+
+
+.s6 {
+    top: 18.1%;
+}
+
+
+.s7 {
+    top: 18.1%;
+}
+
+.s7:hover {
+    cursor: pointer;
+
+}
+
+#button{
+    background-color: none;
+    border: none;
+    color: #377337;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 50%;
+    position: fixed;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+#hide {
+    position: absolute;
+    width: 100%;
+    height: 8000px;
+    background-color: #377337;
+    z-index: 4;
+}
+
+#BeforeClick {
+    width: 450px;
+    position: fixed;
+    left: 50%;
+    top: 49%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+
+}
+
+#GoBack {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 3.5%;
+    left: 2%;
+    background-color: rgb(255, 176, 190);
+    border-radius: 50%;
+    z-index: 5;
+  }
+
+#GoBack:hover{
+    content: url(images/main.jpg);
+    width: 80px;
+    height: 80px;
+    transition: 0.5s ease-in-out;
+  }
+
+#BtnText {
+    display: none;
+    color: black;
+}
+
+#BtnText.show {
+    display: block;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    position: fixed;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    z-index: 5;
+}

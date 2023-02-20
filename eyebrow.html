@@ -1,13 +1,55 @@
 <!DOCTYPE html> 
 
- <header>
+ <head>
  <meta charset="UTF-8">
  <title>Homepage.html</title>
  <link rel="stylesheet" type="text/css" href = "eyebrow.css"/>
- </header>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+ </head>
  
  <body>
-    <p>testtest</p>
+
+  <a href = "index.html">
+    <div id = GoBack></div>
+  </a>
+  
+  <div id = "hide">
+    <img src = "images/frame.png" id = "BeforeClick">
+  </div>
+  <div id="bg"><img src = "images/frame.png" id = "frame"></div>
+  <div class = "StickyWrap">
+    <div class = "sticky s1"><img src = "images/flower1.png" class = "image"></div>
+    <div class = "sticky s2"><img src = "images/flower2.png" class = "image"></div>
+    <div class = "sticky s3"><img src = "images/head.png" class = "image"></div>
+    <div class = "sticky s4"><img src = "images/upperbody.png" class = "image"></div>
+    <div class = "sticky s5"><img src = "images/leaf1.png" class = "image"></div>
+    <div class = "sticky s6"><img src = "images/leave2.png" class = "image"></div>
+    <div class = "sticky s7"><a href = "https://en.wikipedia.org/wiki/Frida_Kahlo"><img src = "images/ribbon.png" class = "image"></a></div>
+  </div>
+
+  <button id = "button"> ? </button>
+  <p id = "BtnText"> SCROLL </p>
+
  </body>
  
+ <script>
+
+    var button = document.getElementById("button");
+    button.addEventListener("click", hideDiv);
+
+    function hideDiv() {
+      var div = document.getElementById("hide");
+      div.style.display = "none";
+    }
+
+    const MyBtn = document.querySelector("#button");
+    const MyText = document.querySelector("#BtnText");
+
+    MyBtn.addEventListener("click", function() {
+    MyText.classList.toggle("show");
+    });
+ </script>
+
  </html>

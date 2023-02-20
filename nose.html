@@ -2,26 +2,90 @@
 
  <header>
  <meta charset="UTF-8">
- <title>Homepage.html</title>
+ <title>nose.html</title>
  <link rel="stylesheet" type="text/css" href = "nose.css"/>
+ <link href="https://fonts.cdnfonts.com/css/medusa-gothic" rel="stylesheet">
  </header>
  
  <body>
-    <p>What fruit is forbidden? </p>
+  <div id = bg>
 
-   <div class="CellWrapper">
-      <div class="cell" id = "cell1">1.</div>
-      <div class="cell" id = "cell2">2.</div>
-      <div class="cell" id = "cell3">3.</div>
-      <div class="cell" id = "cell4">4.</div>
-      <div class="cell" id = "cell5">5.</div>
-      <div class="cell" id = "cell6">6.</div>
-      <div class="cell" id = "cell7">7.</div>
-      <div class="cell" id = "cell8">8.</div>
-      <div class="cell" id = "cell9">9.</div> 
+    <div class="container">
+      <div class="line"></div>
     </div>
-   <img src = "images/SonOfMan.png" style = "width: 520px;">
+
+    <a href = "index.html">
+      <div id = GoBack></div>
+    </a>
+
+    <div class = "ask1">
+     <div class = "InsideAsk1">Where is the</div> 
+     <div class = "InsideAsk1" id = "answer">forbidden fruit?</div>
+    </div>
+    
+    <P id = "scroll">SCROLL</P>
+
+ 
+
+
+    <div class = "ask2">
+      <p>Do not give up. you are almost there...</p>
+    </div>
+
+    <table id="styledtable">
+      <tr>
+        <td id = "cell1"></td>
+        <td id = "cell2"></td>
+        <td id = "cell3"></td>
+      </tr>
+      <tr>
+        <td id = "cell4"></td>
+        <td id = "cell5"></td>
+        <td id = "cell6"></td>
+      </tr>
+      <tr>
+        <td id = "cell7"></td>
+          <td style = "cursor:pointer" id = "cell8"> <a href = "eyes.html"></a></td>
+        <td id = "cell9"></td>
+      </tr>
+    </table>
+   <div id = "ImgNText">
+      <a href = "https://en.wikipedia.org/wiki/The_Son_of_Man"> <img src = "" id = "ThePainting" style = "width: 520px;"> </a>
+      <div id="ImgText"> You are a smart cookie! </div>
+   </div>
    
+   <button id = "button" onclick = "ShowText()"> ? </button>
+   <p id = "BtnText"> Maybe go back to the top to look around? </p>
+  </div>
+
+<script>
+
+    //click btn to show text
+    const MyBtn = document.querySelector("#button");
+    const MyText = document.querySelector("#BtnText");
+
+    MyBtn.addEventListener("click", function() {
+      MyText.classList.toggle("show");
+    });
+
+    //click btn to change text color
+    const colorButton = document.querySelector('#button');
+    const colorText = document.querySelector('#answer');
+
+    colorButton.addEventListener('click', function() {
+      colorText.style.color = "green";
+      colorText.style.cursor = "pointer";
+    });
+
+//click text to show image
+    const TheAnswer = document.getElementById("answer");
+    const image = document.getElementById("ThePainting");
+
+    TheAnswer.addEventListener("click", () => {
+      image.src = "images/SonOfMan.png";
+    }) 
+    
+ </script>
 
  </body>
  
