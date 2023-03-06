@@ -1,0 +1,91 @@
+html {
+  border: 0;
+  margin: 0;
+}
+
+.box .BeforeCheck {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0%;
+  transition-delay: 2s;
+  display: block;
+} 
+
+
+#PomeBackCheckbox:checked ~ .box:nth-of-type(2) .BeforeCheck {
+  display: block;
+}
+
+#BeeCheckbox:checked ~ .box:nth-of-type(3) .BeforeCheck {
+  display: block;
+}
+
+#CliffCheckbox:checked ~ .box:nth-of-type(4) .BeforeCheck {
+  display: block;
+}
+
+
+#PomeFrontCheckbox:checked ~ .box:nth-of-type(5) .BeforeCheck {
+  display: block;
+}
+
+#WomanCheckbox:checked ~ .box:nth-of-type(6) .BeforeCheck {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.questions {
+  margin-right: 20px;
+  flex-direction: column;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.HoverContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+.HoverContainer:hover .fish{
+  display: block;
+  opacity: 100%;
+  z-index: 12;
+  transition: ease-in-out 0.5s;
+}
+
+.HoverContainer:hover .tiger1{
+  display: block;
+  opacity: 100%;
+  z-index: 12;
+  transition: 0.2s ease-in-out 0.3s; 
+}
+
+.HoverContainer:hover .tiger2{
+  display: block;
+  opacity: 100%;
+  z-index: 12;
+  transition: 1s ease-in-out 0.5s;
+}
