@@ -2,53 +2,19 @@ html {
   border: 0;
   margin: 0;
   background-color:rgb(173, 219, 255);
+  font-family: 'Lato', sans-serif;
 }
 
-#wholewrap {
+.wholewrap {
   position: fixed;
   width: 100vw;
   height: 100vh;
   margin: 0;
 }
 
-.box .BeforeHover {
-  position: absolute;
-  left: 38%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.box .BeforeHover img {
-width: 100%;
-}
-
-.box .BeforeCheck {
-  display: none;
-  position: absolute;
-  left: 35%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.box .BeforeCheck img {
-  width: 100%;
-}
-
-.imgContainer {
-  display: none;
-  position: absolute;
-  left: 38%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.imgContainer img {
-  width: 100%;
-}
-
 .bgwrap{
   position: absolute;
-  left: 38%;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -58,115 +24,157 @@ width: 100%;
   width: 100%;
 }
 
+
+.CheckContainer {
+  width: 100vw;
+  height: 100vh;
+  }
+
+
+.box > .BeforeCheck{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box > .BeforeCheck img {
+  width: 100%;
+  opacity: 0;
+} 
+
+#BeeCheckbox:checked ~ .CheckContainer > .box > .BeforeCheck > .bee {
+  opacity: 1;
+}
+
+#CliffCheckbox:checked ~ .CheckContainer > .box > .BeforeCheck > .cliff {
+  opacity: 1;
+}
+
+#PomeBackCheckbox:checked ~ .CheckContainer > .box > .BeforeCheck > .PomegranateBack {
+  opacity: 1;
+}
+
+#PomeFrontCheckbox:checked ~ .CheckContainer > .box > .BeforeCheck > .PomegranateFront {
+  opacity: 1;
+}
+
+#WomanCheckbox:checked ~ .CheckContainer > .box >  .BeforeCheck > .woman {
+  opacity: 1;
+}
+
+#BeeCheckbox:checked ~ .BeeLabel .yellow {
+  color: #e3d50b;
+  /* text-decoration: underline; */
+}
+
+#BeeCheckbox:checked ~ .BeeLabel .black {
+  color: black;
+  /* text-decoration: underline; */
+}
+
+#CliffCheckbox:checked ~ .CliffLabel .brown {
+  color: #AC8832;
+  /* text-decoration: underline; */
+}
+
+#PomeBackCheckbox:checked ~ .PomeBackLabel .purple {
+  color: #711bab;
+  /* text-decoration: underline; */
+}
+
+#PomeBackCheckbox:checked ~ .PomeBackLabel .green {
+  color: #0a800c;
+  /* text-decoration: underline; */
+}
+
+#PomeBackCheckbox:checked ~ .PomeBackLabel .red {
+  color: #911e0a;
+  /* text-decoration: underline; */
+}
+
+#PomeFrontCheckbox:checked ~ .PomeFrontLabel .red {
+  color: #911e0a;
+  /* text-decoration: underline; */
+}
+
+#WomanCheckbox:checked ~ .WomanLabel .blue {
+  color: #030fa1;
+  /* text-decoration: underline; */
+}
+
+
+
+.box .BeforeHover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box .BeforeHover img {
+width: 100%;
+}
+
 .center {
   opacity: 0%;
   transition-delay: 2s;
   display: block;
 } 
 
-
-#PomeBackCheckbox:checked ~ .box:nth-of-type(2) .BeforeCheck {
-  display: block;
-}
-
-#BeeCheckbox:checked ~ .box:nth-of-type(3) .BeforeCheck {
-  display: block;
-}
-
-#CliffCheckbox:checked ~ .box:nth-of-type(4) .BeforeCheck {
-  display: block;
-}
-
-
-#PomeFrontCheckbox:checked ~ .box:nth-of-type(5) .BeforeCheck {
-  display: block;
-}
-
-#WomanCheckbox:checked ~ .box:nth-of-type(6) .BeforeCheck {
-  display: block;
-}
-
-
-.questions {
-  margin-right: 20px;
-  flex-direction: column;
-}
-
-label {
-  margin-right: 10px;
-}
-
 .HoverContainer {
-width: 40vw;
-height: 80vh;
-margin-left: 12vw;
-margin-top: 10vh;
-}
-
-.HoverContainer:hover .fish{
-  display: block;
-  opacity: 100%;
-  z-index: 10;
-  transition: ease-in-out 0.5s;
-}
-
-.HoverContainer:hover .tiger1{
-  display: block;
-  opacity: 100%;
-  z-index: 10;
-  transition: 0.2s ease-in-out 0.3s; 
-}
-
-.HoverContainer:hover .tiger2{
-  display: block;
-  opacity: 100%;
-  z-index: 10;
-  transition: 1s ease-in-out 0.5s;
-}
-
-.HoverContainer:hover .PomegranatePieces{
-  display: block;
-  opacity: 100%;
-  z-index: 10;
-  transition: 0s;
-  animation: drop 0.9s;
-	animation-iteration-count: infinite;
-	transform-origin: center;
-}
-
-@keyframes drop {
-	0% { transform: translate(0px, 0px)}
-	20% { transform: translate(0px, 18px)}
-	40% { transform: translate(4px, 0px)}
-	60% { transform: translate(0px, 10px)}
-  80% { transform: translate(4px, 0px)}
-	90% { transform: translate(0px, 10px)}
-  100% { transform: translate(0px, 0px)}
+  width: 40vw;
+  height: 80vh;
+  margin-left: 12vw;
+  margin-top: 10vh;
   }
-
-  .textWrap {
-    position: absolute;
-    width: 40vw;
-    height: 55vh;
-    margin-left: 60vw;
-    margin-top: 22.5vh;
-    z-index: 3;
-    font-size: 20px;
+  
+  .HoverContainer:hover .fish{
+    display: block;
+    opacity: 100%;
+    z-index: 10;
+    transition: ease-in-out 0.5s;
   }
-
-  ul {
-    align-items: start;
+  
+  .HoverContainer:hover .tiger1{
+    display: block;
+    opacity: 100%;
+    z-index: 10;
+    transition: 0.2s ease-in-out 0.3s; 
   }
-
-  .textWrap::selection {
-    background-color: yellow;
+  
+  .HoverContainer:hover .tiger2{
+    display: block;
+    opacity: 100%;
+    z-index: 10;
+    transition: 1s ease-in-out 0.5s;
   }
-
-
-  .block {
-    display: inline-block;
+  
+  .HoverContainer:hover .PomegranatePieces{
+    display: block;
+    opacity: 100%;
+    z-index: 10;
+    transition: 0s;
+    animation: drop 0.9s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
   }
+  
+  @keyframes drop {
+    0% { transform: translate(0px, 0px)}
+    20% { transform: translate(0px, 18px)}
+    40% { transform: translate(4px, 0px)}
+    60% { transform: translate(0px, 10px)}
+    80% { transform: translate(4px, 0px)}
+    90% { transform: translate(0px, 10px)}
+    100% { transform: translate(0px, 0px)}
+    }
 
-  .checkbox {
-    cursor: pointer;
-  }
+    .checkbox {
+      cursor: pointer;
+    }
+
+    /* you can even hide the checkbox
+    input[type="checkbox"] {
+      visibility: hidden;
+    } */
