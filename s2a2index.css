@@ -172,9 +172,19 @@ width: 100%;
 
     .checkbox {
       cursor: pointer;
+      z-index: 11;
     }
 
     /* you can even hide the checkbox
     input[type="checkbox"] {
       visibility: hidden;
     } */
+    label {
+      font-size: 18px;
+      z-index: 11;
+    }
+
+    p {
+      font-size: 20px;
+      z-index: 11;
+    }
