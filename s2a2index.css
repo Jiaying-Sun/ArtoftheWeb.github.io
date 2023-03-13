@@ -1,29 +1,64 @@
 html {
   border: 0;
   margin: 0;
+  background-color:rgb(173, 219, 255);
+}
+
+#wholewrap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.box .BeforeHover {
+  position: absolute;
+  left: 38%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box .BeforeHover img {
+width: 100%;
 }
 
 .box .BeforeCheck {
   display: none;
   position: absolute;
-  left: 50%;
+  left: 35%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.bg {
+.box .BeforeCheck img {
+  width: 100%;
+}
+
+.imgContainer {
+  display: none;
   position: absolute;
-  left: 50%;
+  left: 38%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imgContainer img {
+  width: 100%;
+}
+
+.bgwrap{
+  position: absolute;
+  left: 38%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
 }
 
+.bgwrap img {
+  width: 100%;
+}
+
 .center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   opacity: 0%;
   transition-delay: 2s;
   display: block;
@@ -51,9 +86,6 @@ html {
   display: block;
 }
 
-.wrapper {
-  display: flex;
-}
 
 .questions {
   margin-right: 20px;
@@ -65,27 +97,76 @@ label {
 }
 
 .HoverContainer {
-  width: 100vw;
-  height: 100vh;
+width: 40vw;
+height: 80vh;
+margin-left: 12vw;
+margin-top: 10vh;
 }
 
 .HoverContainer:hover .fish{
   display: block;
   opacity: 100%;
-  z-index: 12;
+  z-index: 10;
   transition: ease-in-out 0.5s;
 }
 
 .HoverContainer:hover .tiger1{
   display: block;
   opacity: 100%;
-  z-index: 12;
+  z-index: 10;
   transition: 0.2s ease-in-out 0.3s; 
 }
 
 .HoverContainer:hover .tiger2{
   display: block;
   opacity: 100%;
-  z-index: 12;
+  z-index: 10;
   transition: 1s ease-in-out 0.5s;
 }
+
+.HoverContainer:hover .PomegranatePieces{
+  display: block;
+  opacity: 100%;
+  z-index: 10;
+  transition: 0s;
+  animation: drop 0.9s;
+	animation-iteration-count: infinite;
+	transform-origin: center;
+}
+
+@keyframes drop {
+	0% { transform: translate(0px, 0px)}
+	20% { transform: translate(0px, 18px)}
+	40% { transform: translate(4px, 0px)}
+	60% { transform: translate(0px, 10px)}
+  80% { transform: translate(4px, 0px)}
+	90% { transform: translate(0px, 10px)}
+  100% { transform: translate(0px, 0px)}
+  }
+
+  .textWrap {
+    position: absolute;
+    width: 40vw;
+    height: 55vh;
+    margin-left: 60vw;
+    margin-top: 22.5vh;
+    z-index: 3;
+    font-size: 20px;
+  }
+
+  ul {
+    align-items: start;
+  }
+
+  .textWrap::selection {
+    background-color: yellow;
+  }
+
+
+  .block {
+    display: inline-block;
+  }
+
+  .checkbox {
+    cursor: pointer;
+  }
