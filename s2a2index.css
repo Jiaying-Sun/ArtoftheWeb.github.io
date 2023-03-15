@@ -1,20 +1,29 @@
-html {
+html, body{
   border: 0;
   margin: 0;
   background-color:rgb(173, 219, 255);
   font-family: 'Lato', sans-serif;
 }
 
-.wholewrap {
-  position: fixed;
-  width: 100vw;
+#wholewrap {
+  position: absolute;
+  width: 100%;
   height: 100vh;
   margin: 0;
 }
 
+.textwrap {
+  /* background-color: #711bab; */
+  position: absolute;
+  width: 35%;
+  top: 23%;
+  left: 12%;
+}
+
+
 .bgwrap{
   position: absolute;
-  left: 50%;
+  left: 68%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -26,88 +35,111 @@ html {
 
 
 .CheckContainer {
-  width: 100vw;
-  height: 100vh;
+  width: 35%;
+  height: 100%;
+  /* background-color: #711bab; */
   }
 
 
-.box > .BeforeCheck{
+.BeforeCheck{
   position: absolute;
-  left: 50%;
+  left: 68%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.box > .BeforeCheck img {
+.BeforeCheck img {
   width: 100%;
   opacity: 0;
 } 
 
-#BeeCheckbox:checked ~ .CheckContainer > .box > .BeforeCheck > .bee {
+#BeeCheckbox:checked ~ #wholewrap > .ImageContainer > .BeforeCheck > .bee {
   opacity: 1;
 }
 
-#CliffCheckbox:checked ~ .CheckContainer > .box > .BeforeCheck > .cliff {
+ #CliffCheckbox:checked ~ #wholewrap > .ImageContainer > .BeforeCheck > .cliff {
   opacity: 1;
 }
 
-#PomeBackCheckbox:checked ~ .CheckContainer > .box > .BeforeCheck > .PomegranateBack {
+#GunCheckbox:checked ~ #wholewrap > .ImageContainer > .BeforeCheck > .gun {
   opacity: 1;
 }
 
-#PomeFrontCheckbox:checked ~ .CheckContainer > .box > .BeforeCheck > .PomegranateFront {
+#PomeBackCheckbox:checked ~ #wholewrap > .ImageContainer > .BeforeCheck > .PomegranateBack {
   opacity: 1;
 }
 
-#WomanCheckbox:checked ~ .CheckContainer > .box >  .BeforeCheck > .woman {
+#PomeFrontCheckbox:checked ~ #wholewrap > .ImageContainer > .BeforeCheck > .PomegranateFront {
   opacity: 1;
 }
 
-#BeeCheckbox:checked ~ .BeeLabel .yellow {
+#WomanCheckbox:checked ~ #wholewrap > .ImageContainer >  .BeforeCheck > .woman {
+  opacity: 1;
+}
+
+#BeeCheckbox:checked ~ #wholewrap .textwrap .BeeLabel .yellow {
   color: #e3d50b;
   /* text-decoration: underline; */
 }
 
-#BeeCheckbox:checked ~ .BeeLabel .black {
+#BeeCheckbox:checked ~ #wholewrap .textwrap .BeeLabel .black {
   color: black;
   /* text-decoration: underline; */
 }
 
-#CliffCheckbox:checked ~ .CliffLabel .brown {
+#CliffCheckbox:checked ~ #wholewrap .textwrap .CliffLabel .brown {
   color: #AC8832;
   /* text-decoration: underline; */
 }
 
-#PomeBackCheckbox:checked ~ .PomeBackLabel .purple {
+#GunCheckbox:checked ~ #wholewrap .textwrap .GunLabel .bloodred {
+  color: red;
+  /* text-decoration: underline; */
+}
+
+#PomeBackCheckbox:checked ~ #wholewrap .textwrap .PomeBackLabel .purple {
   color: #711bab;
   /* text-decoration: underline; */
 }
 
-#PomeBackCheckbox:checked ~ .PomeBackLabel .green {
+#PomeBackCheckbox:checked ~ #wholewrap .textwrap .PomeBackLabel .green {
   color: #0a800c;
   /* text-decoration: underline; */
 }
 
-#PomeBackCheckbox:checked ~ .PomeBackLabel .red {
+#PomeBackCheckbox:checked ~ #wholewrap .textwrap .PomeBackLabel .red {
   color: #911e0a;
   /* text-decoration: underline; */
 }
 
-#PomeFrontCheckbox:checked ~ .PomeFrontLabel .red {
+#PomeFrontCheckbox:checked ~ #wholewrap .textwrap .PomeFrontLabel .red {
   color: #911e0a;
   /* text-decoration: underline; */
 }
 
-#WomanCheckbox:checked ~ .WomanLabel .blue {
+#WomanCheckbox:checked ~ #wholewrap .textwrap .WomanLabel .blue {
   color: #030fa1;
   /* text-decoration: underline; */
 }
+
+#YesCheckbox:checked ~ #wholewrap .textwrap .yesLabel {
+  color: #0a800c;
+}
+
+#YesCheckbox:checked ~ #wholewrap .textwrap .yesLabel .hide {
+  display: block;
+}
+
+#NoCheckbox:checked ~ #wholewrap .textwrap .noLabel {
+  color: rgb(101, 73, 73);
+}
+
 
 
 
 .box .BeforeHover {
   position: absolute;
-  left: 50%;
+  left: 68%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -122,35 +154,32 @@ width: 100%;
   display: block;
 } 
 
-.HoverContainer {
-  width: 40vw;
-  height: 80vh;
-  margin-left: 12vw;
-  margin-top: 10vh;
+.ImageContainer {
+  background-color:#0a800c;
   }
   
-  .HoverContainer:hover .fish{
+  .ImageContainer:hover .fish{
     display: block;
     opacity: 100%;
     z-index: 10;
     transition: ease-in-out 0.5s;
   }
   
-  .HoverContainer:hover .tiger1{
+  .ImageContainer:hover .tiger1{
     display: block;
     opacity: 100%;
     z-index: 10;
     transition: 0.2s ease-in-out 0.3s; 
   }
   
-  .HoverContainer:hover .tiger2{
+  .ImageContainer:hover .tiger2{
     display: block;
     opacity: 100%;
     z-index: 10;
     transition: 1s ease-in-out 0.5s;
   }
   
-  .HoverContainer:hover .PomegranatePieces{
+  .ImageContainer:hover .PomegranatePieces{
     display: block;
     opacity: 100%;
     z-index: 10;
@@ -170,15 +199,23 @@ width: 100%;
     100% { transform: translate(0px, 0px)}
     }
 
+    .hide {
+      display: none;
+      color:#0a800c;
+      z-index: 11;
+
+    }
+
     .checkbox {
       cursor: pointer;
       z-index: 11;
     }
 
-    /* you can even hide the checkbox
+
     input[type="checkbox"] {
       visibility: hidden;
-    } */
+    }
+
     label {
       font-size: 18px;
       z-index: 11;
@@ -187,4 +224,8 @@ width: 100%;
     p {
       font-size: 20px;
       z-index: 11;
+    }
+
+    ul {
+      display: block;
     }

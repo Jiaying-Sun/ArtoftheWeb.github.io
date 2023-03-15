@@ -10,60 +10,74 @@
  </header>
  
  <body>
-  <!-- Question1 -->
-  <p>
-    &nbsp;&nbsp;
-    &nbsp;&nbsp;
-    &nbsp;&nbsp;
 
-  </p>
-  <p>1. Select to reveal:</p>
+ 
+  <input type="checkbox" id= "BeeCheckbox" class="checkbox">
+  <input type="checkbox" id= "CliffCheckbox" class="checkbox">
+  <input type="checkbox" id = "GunCheckbox" class = "checkbox">
+  <input type="checkbox" id= "PomeBackCheckbox" class="checkbox">
+  <input type="checkbox" id= "PomeFrontCheckbox" class="checkbox">
+  <input type="checkbox" id= "WomanCheckbox" class="checkbox">
+  <input type="checkbox" id= "YesCheckbox" class="checkbox">
+  <input type="checkbox" id= "NoCheckbox" class="checkbox">
 
-    <input type="checkbox" id="BeeCheckbox" class="checkbox">
-    <label for="BeeCheckbox" class="BeeLabel"><span class = "black">A</span> <span class = "yellow">tiny</span> <span class = "black">little</span> <span class = "yellow">bee</span></label>
-
-    <input type="checkbox" id="CliffCheckbox" class="checkbox">
-    <label for="CliffCheckbox" class="CliffLabel">The <span class = "brown">Cliff</span></label>
-
-    <input type="checkbox" id="PomeBackCheckbox" class="checkbox">
-    <label for="PomeBackCheckbox" class = "PomeBackLabel">The <span class = "purple">m</span><span class = "green">a</span><span class = "purple">g</span><span class = "green">i</span><span class = "purple">c</span> <span class = "red">pomegranate</span></label>
-  <p>
-    &nbsp;&nbsp;
-    &nbsp;&nbsp;
-    &nbsp;&nbsp;
-  </p>
-  <!-- Question2 -->
-  <p>2. Where does the shadows on the rock comes from?</p>
-
-    <input type="checkbox" id="PomeFrontCheckbox" class="checkbox">
-    <label for="PomeFrontCheckbox" class = "PomeFrontLabel">A <span class = "red">pomegranate</span></label>
-
-    <input type="checkbox" id="WomanCheckbox" class="checkbox">
-    <label for="WomanCheckbox" class = "WomanLabel">A <span class = "blue">sleeping</span> female</label>
-  
+  <div id = "wholewrap">
+  <div class = "textwrap">
+    <!-- Question1 -->
+    <p id="question1">1. Select to reveal:</p>
+    <ul>
+      <label for="BeeCheckbox" class= "BeeLabel"><span class = "black">A</span> <span class = "yellow">tiny</span> <span class = "black">little</span> <span class = "yellow">bee</span></label>
+    </ul>
+    <ul>
+      <label for="CliffCheckbox" class ="CliffLabel">The <span class = "brown">cliff</span></label>
+    </ul>
+    <ul>
+      <label for = "GunCheckbox" class = "GunLabel">A <span class = "bloodred">gun</span></label>
+    </ul>
+    <ul>
+      <label for="PomeBackCheckbox" class = "PomeBackLabel">The <span class = "purple">m</span><span class = "green">a</span><span class = "purple">g</span><span class = "green">i</span><span class = "purple">c</span> <span class = "red">pomegranate</span></label>
+    </ul>
+    <!-- Question2 -->
+    <p>2. Where do the shadows on the rock come from?</p>
+    <ul>
+      <label for="PomeFrontCheckbox" class = "PomeFrontLabel">A <span class = "red">pomegranate</span></label>
+    </ul>
+    <ul>
+      <label for="WomanCheckbox" class = "WomanLabel">A <span class = "blue">sleeping</span> person</label>
+    </ul>
+    <!-- Qestion3 -->
+    <p>3. Are we missing something?</p>
+    <ul>
+      <label for ="YesCheckbox" class = "yesLabel">Yes! <span class = "hide">Try hover on the magic Pomegranate!</span></label>
+    </ul>
+    <ul>
+      <label for = "NoCheckbox" class = "noLabel">Emm..It's enough.</label>
+    </ul>
+  </div>
 
 
 
   <!-- images -->
-  <div class = "CheckContainer"> 
-    <div class="box">
-      <div class = "BeforeCheck"><img class="bee" src = "images2/bee.png" alt = "The tiny little bee next to the normal pomegranate"></div>
+  <div class = "ImageContainer">
+    <div class = "BeforeCheck">
+        <img class="bee" src = "images2/bee.png" alt = "The tiny little bee next to the normal pomegranate">
     </div>
-    <div class="box">
-      <div class = "BeforeCheck"><img class="cliff" src="images2/cliff.png" alt="A cliff on the right side"></div>
+    <div class="BeforeCheck">
+      <img class="cliff" src="images2/cliff.png" alt="A cliff on the right side">
     </div>
-    <div class ="box">
-      <div class = "BeforeCheck"><img class = "PomegranateBack" src = "images2/PomegranateBack.png" alt="A magic pomegranate"></div>
+    <div class="BeforeCheck">
+      <img class="gun" src="images2/gun.png" alt="A gun">
     </div>
-    <div class ="box">
-      <div class = "BeforeCheck"><img class = "PomegranateFront" src = "images2/PomegranateFront.png" alt="A normal pomegranate floating on the rock"></div>
+    <div class = "BeforeCheck">
+      <img class = "PomegranateBack" src = "images2/PomegranateBack.png" alt="A magic pomegranate">
     </div>
-    <div class ="box">
-      <div class = "BeforeCheck"><img class = "woman" src = "images2/woman.png" alt="A sleeping female on the rock"></div>
+    <div class = "BeforeCheck">
+      <img class = "PomegranateFront" src = "images2/PomegranateFront.png" alt="A normal pomegranate floating on the rock">
     </div>
-  </div>
+    <div class = "BeforeCheck">
+      <img class = "woman" src = "images2/woman.png" alt="A sleeping person on the rock">
+    </div>
 
-  <div class = "HoverContainer"> 
     <div class ="box">
       <div class ="BeforeHover"><img src = "images2/fish.png" alt="A red fish flying out from the magic pomegranate" class = "fish center"></div>
     </div>
@@ -80,6 +94,18 @@
   <div class="bgwrap">
     <img src = "images2/background.png" alt = "In the blue dream, an elephant with long legs walking on the sea">
   </div>
+  
+</div>
 
 </div>
+  <script>
+    //click btn to show text
+    const MyBtn = document.querySelector("#yes");
+    const MyText = document.querySelector("#BtnText");
+
+    MyBtn.addEventListener("click", function() {
+      MyText.classList.toggle("show");
+    });
+  </script>
+
 </body>
