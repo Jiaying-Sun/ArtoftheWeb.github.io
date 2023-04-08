@@ -52,16 +52,11 @@ margin-bottom: 65px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 70%;
 }
 
 p {
     text-align: center;
-}
-
-.btns{
-
-
 }
 
 #game1 {
@@ -96,7 +91,7 @@ p {
 }
 
 #IndTitle {
-    font-size: larger;
+    font-size: 20px;
     font-weight: 500;
     color: white;
 }
@@ -179,4 +174,9 @@ p {
   .btns {
     padding: 0 40px;
   }
+}
+
+#hint {
+    color: white;
+    font-size: 20px;
 }
