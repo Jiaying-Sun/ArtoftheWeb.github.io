@@ -120,7 +120,7 @@ html, body {
     display: block;
     font-family: 'Lato', sans-serif;
     color: white;
-    position: fixed;
+    position: absolute;
     top: 82%;
     left: 50%;
     transform: translate(-50%, -50%);

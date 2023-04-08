@@ -1,0 +1,32 @@
+html {
+    padding: 0;
+    margin: 0;
+    background-image: url("images3/farm.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center
+}
+
+#horse {
+    position: fixed;
+    right: 35%;
+    top: 30%;
+}
+
+#watermelon {
+    position: fixed;
+    right: 5%;
+    top: 60%;
+}
+
+#FarmSchedule {
+    position: fixed;
+    left: 5%;
+    top: 30%;
+}
+p {
+    font-size: 60px;
+    color: white;
+    position: fixed;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+
+ <header>
+ <meta charset="UTF-8">
+ <title>SillyGame.html</title>
+ <link rel="stylesheet" type="text/css" href = "horse.css"/>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+ </header>
+ 
+ <body>
+  <div id = "center">
+    <p id = "MainTitle">Can you think beyond what you see?</p>
+    <p>Find out the rules to reveal the answers.
+        Observe, and think outside the box to find the pattern. </p>
+    <p id = "IndTitle">Find out the number of horses based on observation.</p>
+    <div id = "game1">
+      <video controls src = "video/horse1.mov" alt = "try1" class = "videos"></video>
+      <button class = "btns" id = "try1">Answer</button>
+      <span id = "try1Text" class = "hide">5</span>
+    </div>
+    <div id = "game2">
+      <video controls src = "video/horse2.mov" alt = "try2" class = "videos"></video>
+      <button class = "btns" id = "try2">Answer</button>
+      <span id = "try2Text" class = "hide">2</span>
+    </div>
+    <div id = "game3">
+      <video controls src = "video/horse3.mov" alt = "try3" class = "videos"></video>
+      <button class = "btns" id = "try3">Answer</button>
+      <span id = "try3Text" class = "hide">2</span>
+    </div>
+    <div id = "game4">
+      <video controls src = "video/horse4.mov" alt = "try4" class = "videos"></video>
+      <button class = "btns" id = "try4">Answer</button>
+      <span id = "try4Text" class = "hide">5</span>
+    </div>
+    <div id = "game5">
+      <video controls src = "video/horse5.mov" alt = "try5" class = "videos"></video>
+      <button class = "btns" id = "try5">Answer</button>
+      <span id = "try5Text" class = "hide">8</span>
+    </div>
+    <div id = "hint">
+      <p>Here's a hint</p>
+      <video controls src = "video/horse6.mov" alt = "hint" class = "videos"></video>
+    </div>
+
+    <div id = "scriptDiv">
+      <button class = "btns" id = "giveup"> Come on... Still can't figure out? </button>
+      <p id = "script"> Player has to answer based on the number of words said by the user and not the number of claps.<br>
+      <br>
+      </p>
+      <p id = "leftalign">
+        var x = # of words in question<br>
+        <br>
+        If (answer == x) {<br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp answer = true<br>
+        } else {<br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp answer = false<br>
+        }
+        </p>
+    </div>
+
+  </div>
+
+   <script>
+    //click btn to show text
+    const btn1 = document.querySelector("#try1");
+    const text1 = document.querySelector("#try1Text");
+    const btn2 = document.querySelector("#try2");
+    const text2 = document.querySelector("#try2Text");
+    const btn3 = document.querySelector("#try3");
+    const text3 = document.querySelector("#try3Text");
+    const btn4 = document.querySelector("#try4");
+    const text4 = document.querySelector("#try4Text");
+    const btn5 = document.querySelector("#try5");
+    const text5 = document.querySelector("#try5Text");
+
+    const btn6 = document.querySelector("#giveup");
+    const answerScript1 = document.querySelector("#script");
+    const answerScript2 = document.querySelector("#leftalign");
+
+
+
+    btn1.addEventListener("click", function() {
+      text1.classList.toggle("show");
+    });
+    btn2.addEventListener("click", function() {
+      text2.classList.toggle("show");
+    });
+    btn3.addEventListener("click", function() {
+      text3.classList.toggle("show");
+    });
+    btn4.addEventListener("click", function() {
+      text4.classList.toggle("show");
+    });
+    btn5.addEventListener("click", function() {
+      text5.classList.toggle("show");
+    });
+
+    btn6.addEventListener("click", function() {
+      answerScript1.classList.toggle("show");
+    });
+
+    btn6.addEventListener("click", function() {
+      answerScript2.classList.toggle("show");
+    });
+   </script>
+
+ </body>
+ 
+ </html>

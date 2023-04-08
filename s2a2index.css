@@ -229,3 +229,15 @@ width: 100%;
     ul {
       display: block;
     }
+
+    #wholewrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: 1000px) {
+      #wholewrap {
+        display: flex;
+        flex-direction: column;
+      }
+    }
