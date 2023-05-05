@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href = "portfolioindex.css"/>
+  <title>3D Art Gallery Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class= "container">
+    <div class = "s3a3Text">
+      <p>Interactive water lilies</p>
+    </div>
+
+    <div class= "ceiling">
+        <div class= "ceiling-darken"></div>
+        <div class= "ceiling-pattern"></div>
+    </div>
+    <div class= "left-wall">
+      <div class = "leftSideImg">
+        <div class = "s3a3Wrap">
+          <a href = "https://openprocessing.org/sketch/1903761"><img id = "s3a3" src = "portfolioImages/s3a3.png"></a>
+        </div>
+          <a href = "s3a1index.html"><img id = "s3a1" src = "portfolioImages/s3a1.png"></a>
+      </div>
+      <div class= "wall-texture"></div>
+      <div class= "wall-pattern"></div>
+    </div>
+    <div class= "back-wall">
+        <div class= "wall-texture"></div>
+        <div class= "wall-pattern"></div>
+        <a href = "portfolioRoom2.html"><div id="eye" class="eye">
+          <div id="pupil" class="pupil"></div>
+          <div class="mask"></div>
+        </div></a>
+        <button id = buttonChange>New Paintings</button>       
+    </div>
+    <div class= "right-wall">
+      <div class = "rightSideImg">
+        <a href = "s3a2index.html"><img id = s3a2 src = "portfolioImages/s3a2.png"></a>
+        <a href = "s2a2index.html"><img id = s2a2 src = "portfolioImages/s2a2.png"></a>
+      </div>
+        <div class= "wall-texture"></div>
+        <div class= "wall-pattern"></div>
+    </div>
+    <div class= "floor">
+      <!-- <p id = "Welcome">Welcome to Jiaying's Interactive Gallery</p> -->
+        <div class= "floor-darken"></div>
+        <div class= "floor-texture"></div>
+    </div>
+</div>
+
+<script>
+'use strict';
+
+const b = document.body;
+const i = document.querySelector('#eye');
+const p = document.querySelector('#pupil');
+const iw = i.offsetWidth / 2;
+const ih = i.offsetHeight / 2;
+const pw = p.offsetWidth / 2;
+const ph = p.offsetHeight / 2;
+
+b.addEventListener('mousemove', e => {
+  const x1 = b.offsetWidth / 2;
+  const y1 = b.offsetHeight / 2;
+  const x2 = e.clientX;
+  const y2 = e.clientY;
+  let px = x2 - x1;
+  let py = y2 - y1;
+  const t = Math.atan2(py, px);
+  const ax = iw + (pw * Math.cos(t));
+  const ay = ih + (ph * Math.sin(t));
+
+  if (x2 > x1 && y2 > y1) {
+		px = (px + iw > ax) ? (ax - iw) : px;
+		py = (py + ih > ay) ? (ay - ih) : py;
+	}
+	else if (x2 < x1 && y2 < y1) {
+		px = (px + iw < ax) ? (ax - iw) : px;
+		py = (py + ih < ay) ? (ay - ih) : py;
+	}
+	else if (x2 > x1 && y2 < y1) {
+		px = (px + iw > ax) ? (ax - iw) : px;
+		py = (py + ih < ay) ? (ay - ih) : py;
+	}
+	else if (x2 < x1 && y2 > y1) {
+		px = (px + iw < ax) ? (ax - iw) : px;
+		py = (py + ih > ay) ? (ay - ih) : py;
+	}
+	
+	p.style.left = (px + pw) + 'px';
+	p.style.top  = (py + pw) + 'px';
+});
+
+b.addEventListener('mouseleave', e => {
+	p.style.left = 'calc(50% - ' + pw + 'px)';
+	p.style.top  = 'calc(50% - ' + ph + 'px)';
+});
+
+</script>
+</body>
+</html>
+
+    
