@@ -280,16 +280,16 @@ body, html {
                   inset -4px -4px 12px #ffffff;
      }
 
-.s3a3Text {
+.allText {
   display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 100px;
-  font-size: 4vh;
+  padding: 8vw;
+  font-size: 1vw;
   z-index: 100;
-  text-align: center;
+  text-align: left;
 	text-decoration: none;
 	color: rgb(52, 52, 52);
 	background-color: rgba(255, 255, 255, 0.06);
@@ -303,4 +303,8 @@ body, html {
 
 #s3a3:hover ~ .s3a3Text {
   display: block;
+}
+
+h1 {
+  padding-bottom: 10px;
 }
