@@ -159,6 +159,10 @@ body, html {
     
   }
 
+  .eye:hover {
+
+  }
+
     .pupil {
       width: var(--pupil-size);
       height: var(--pupil-size);
@@ -198,79 +202,106 @@ body, html {
     }
 
     #s3a3 {
-        width: auto;
-        height: 55vh;
-        position:relative;
-        top: 17%;
-        left:7%;
+        width: 35vw;
+        height: auto;
+        object-fit: cover;
+        position:absolute;
+        top: 20vh;
+        left:3%;
         z-index: 10;
     }
 
     #s3a1 {
-        width: auto;
-        height: 50vh;
-        position:relative;
-        top: 17%;
-        left: 18%;
+        width: 48vw;
+        height: auto;
+        object-fit: cover;
+        position:absolute;
+        top: 20vh;
+        right: 10%;
         z-index: 10;
         box-shadow: #000000;
     }
 
     #s3a2 {
-      width: auto;
-      height: 60vh;
-      position:relative;
-      top: 19%;
-      left: 40%;
+      width: 48vw;
+      height: auto;
+      object-fit: cover;
+      position:absolute;
+      top: 20vh;
+      left: 15%;
       z-index: 10;
   }
 
   #s2a2 {
-      width: auto;
-      height: 47vh;
-      position:relative;
-      top: 20%;
-      left:110%;
+      width: 25vw;
+      height: auto;
+      object-fit: cover;
+      position:absolute;
+      top: 20vh;
+      right: 3%;
       z-index: 10;
   }
 
-    #buttonChange {
-        cursor: pointer;
-        z-index: 100;
-        display: none;
-        background-color: #9198e5;
-        transform: translate3d(0, 0, +100vw);
-        font-size: 80px;
-    }
-
-    @media screen and (max-width:768px) {
-      #buttonChange {
-        display: block;
-      }
-
-    }
-
+  .WelcomeWrap {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+  }
     #Welcome {
-      color: #000000;
+      text-align: center;
+      display: block;
+      font-size: 3.5vw;
+      white-space: nowrap;
+      width: 40ch;
+      animation: typing 4s steps(40), blink .5s step-end infinite alternate;
+      overflow: hidden;
+      border-right: 3px solid;
+      z-index: 1000;
+      margin: 0.5em 0;
+      color: #22313F;
+      letter-spacing: 0.03em;
+      text-shadow: -0.1em 0 0 #F22613,  0.1em 0 0 #00FFFF;
+
+      /* color: #000000;
       z-index: 10;
-      left: 20%; /* adjust left value to move element to the left */
-      bottom: 15%; /* adjust bottom value to move element up */
+      left: 20%; 
+      bottom: 15%;
       font-size: 100px;
       position: absolute;
-      transform: translateZ(300px); /* rotate the element -90 degrees around the X axis */
+      transform: translateZ(300px);  */
+    }
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+    }
+        
+    @keyframes blink {
+      50% {
+        border-color: transparent
+      }
     }
     
-    #buttonChange {
+    /* #buttonChange {
+      cursor: pointer;
+      z-index: 100;
+      display: none;
+      transform: translate3d(0, 0, +100vw);
+      font-size: 80px;
+      bottom: 7%;
       position: absolute;
-      left: 34vw;
       color: #090909;
       padding: 0.7em 1.7em;
-      font-size: 18px;
+      font-size: 3vw;
       border-radius: 0.5em;
       background: #d4d4d4;
-      border: 1px solid #cecece;
-      transition: all .3s;
-      box-shadow: 6px 6px 12px #8d8d8d,
+      border: 1px solid #cacaca;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 6px 6px 12px #b3b3b3,
                   -6px -6px 12px #e7e7e7;
      }
      
@@ -278,8 +309,9 @@ body, html {
       color: #666;
       box-shadow: inset 4px 4px 12px #c5c5c5,
                   inset -4px -4px 12px #ffffff;
-     }
+     } */
 
+     
 .allText {
   display: none;
   position: absolute;
@@ -299,12 +331,78 @@ body, html {
 	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
 	border: 1.5px solid rgba(255, 255, 255, 0.06);
 	border-radius: 8px;
+  pointer-events: none;
 }
 
-#s3a3:hover ~ .s3a3Text {
-  display: block;
+*:has(#s3a3:hover) > .s3a3Text {
+    display: block;
+}
+
+*:has(#s3a1:hover) > .s3a1Text {
+    display: block;
+}
+
+*:has(#s3a2:hover) > .s3a2Text {
+    display: block;
+}
+
+*:has(#s2a2:hover) > .s2a2Text {
+    display: block;
 }
 
 h1 {
   padding-bottom: 10px;
+}
+
+
+@media screen and (max-width:768px) {
+  /* #buttonChange {
+    display: block;
+  } */
+
+  .s3a3Wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #s3a3 {
+    display: block;
+    /* margin: 0 auto; */
+    width: 60vw;
+    height: auto;
+    left: 5%;
+    top: 5%;
+  }
+
+  #s3a1 {
+    display: block;
+    /* margin: 0 auto; */
+    width: 70vw;
+    height: auto;
+    top: 57%;
+    left: 5%;
+  }
+
+  #s2a2 {
+    display: block;
+    /* margin: 0 auto; */
+    width: 43vw;
+    height: auto;
+    right: 10%;
+    top: 5%;
+  }
+
+  #s3a2 {
+    display: block;
+    /* margin: 0 auto; */
+    width: 60vw;
+    height: auto;
+    left: 30%;
+    top: 57%;
+  }
+
+  .allText{
+    font-size: 2vw
+  }
 }

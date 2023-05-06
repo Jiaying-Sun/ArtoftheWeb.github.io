@@ -5,6 +5,7 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    font-family: 'Lato', sans-serif;
   }
   
   .outWrapper{
@@ -213,7 +214,7 @@ body, html {
     #s1a1 {
         width: 50vh;
         height:auto;
-        right: 28%;
+        right:17%;
         top:20vh;
         position:absolute;
         z-index: 100;
@@ -231,7 +232,7 @@ body, html {
       #s2a3 {
         width: 50vh;
         height:auto;
-        left: 10%;
+        left: 5%;
         top:20vh;
         position:absolute;
         z-index: 100;
@@ -293,12 +294,6 @@ body, html {
         font-size: 80px;
     }
 
-    @media screen and (max-width:768px) {
-      #buttonChange {
-        display: block;
-      }
-    }
-
     .allText {
       display: none;
       position: absolute;
@@ -310,7 +305,7 @@ body, html {
       z-index: 100;
       text-align: left;
       text-decoration: none;
-      color: rgb(207, 207, 207);
+      color: rgb(228, 228, 228);
       background-color: rgba(255, 255, 255, 0.06);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px);
@@ -318,8 +313,110 @@ body, html {
       box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
       border: 1.5px solid rgba(255, 255, 255, 0.06);
       border-radius: 8px;
+      pointer-events: none;
+    }
+
+    *:has(#s1a2:hover) > .s1a2Text {
+      display: block;
+    }
+
+    *:has(#s1a1:hover) > .s1a1Text {
+      display: block;
+    }
+
+    *:has(#s2a3:hover) > .s2a3Text {
+      display: block;
+    }
+
+    *:has(#s2a1:hover) > .s2a1Text {
+      display: block;
     }
 
     h1 {
       padding-bottom: 10px;
     }
+
+    @media screen and (max-width:1100px) {
+      /* #buttonChange {
+        display: block;
+      } */
+    
+      .leftSideImg {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      #s1a1 {
+        display: block;
+        /* margin: 0 auto; */
+        width: 45vh;
+        height: auto;
+        left: 5%;
+        top: 6%;
+      }
+    
+      #s2a3 {
+        display: block;
+        /* margin: 0 auto; */
+        width: 45vh;
+        height: auto;
+        top: 53%;
+        left: 5%;
+      }
+
+      #s1a2 {
+        z-index: 100;
+      }
+
+    
+      .allText{
+        font-size: 2vw;
+        z-index: 10000;
+      }
+    }
+
+    .WelcomeWrap {
+      height: 100vh;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      place-items: center;
+    }
+      #Welcome {
+        text-align: center;
+        display: block;
+        font-size: 3.5vw;
+        white-space: nowrap;
+        width: 32ch;
+        animation: typing 4s steps(30), blink .5s step-end infinite alternate;
+        overflow: hidden;
+        border-right: 3px solid;
+        z-index: 1000;
+        margin: 0.5em 0;
+        color: #ffffff;
+        letter-spacing: 0.03em;
+        text-shadow: -0.1em 0 0 #F22613,  0.1em 0 0 #00FFFF;
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+        /* color: #000000;
+        z-index: 10;
+        left: 20%; 
+        bottom: 15%;
+        font-size: 100px;
+        position: absolute;
+        transform: translateZ(300px);  */
+      }
+  
+      @keyframes typing {
+        from {
+          width: 0
+        }
+      }
+          
+      @keyframes blink {
+        50% {
+          border-color: transparent
+        }
+      }
+      
