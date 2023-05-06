@@ -159,9 +159,6 @@ body, html {
     
   }
 
-  .eye:hover {
-
-  }
 
     .pupil {
       width: var(--pupil-size);
