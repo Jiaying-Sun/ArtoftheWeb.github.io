@@ -86,8 +86,8 @@ html, body {
     font-weight: 700;
     cursor: pointer;
     border-radius: 50%;
-    position: fixed;
-    top: 92%;
+    position: absolute;
+    bottom: 3%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 4;
@@ -114,6 +114,7 @@ html, body {
 #BtnText {
     display: none;
     color: black;
+    position:absolute;
 }
 
 #BtnText.show {
